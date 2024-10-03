@@ -12,7 +12,7 @@ public enum SIDE
 public enum ENENY_TYPE
 {
     NORMAL_ENEMY,
-    //Ò¡°ÚµÄµÐÈË
+    // Swaying enemy
     SWING_ENEMY,
     BOSS,
 }

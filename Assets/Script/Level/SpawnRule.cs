@@ -39,8 +39,8 @@ public class SpawnRule : MonoBehaviour
         if(num >= MaxNum)
             return;
 
-        //¿ªÊ¼Ë¢¹Ö
-        if(timeSincelLevelStart > InitTime)
+        // Start spawning enemies
+        if (timeSincelLevelStart > InitTime)
         {
             timer += Time.deltaTime;
             if(timer > Period)
