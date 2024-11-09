@@ -14,6 +14,7 @@ public class Enemy : Unit
 
     public override void OnStart()
     {
+        hp = MaxHP;
         Destroy(gameObject, lifetime);
         initY = Random.Range(range.x, range.y);
         this.transform.localPosition = new Vector3(0, initY, 0);
@@ -44,7 +45,7 @@ public class Enemy : Unit
 
         if (bullet.side == SIDE.PLAYER)
         {
-            Die();
+            Damage(bullet.power);
         }
     }
 

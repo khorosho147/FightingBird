@@ -425,8 +425,8 @@ MonoBehaviour:
   fireRate: 1
   bulletTemplate: {fileID: 3522430151264285694, guid: 530da914a9fd5ff46bd30ba64566fbb8, type: 3}
   firePoint: {fileID: 505074567191983312}
-  hp: 10
-  MaxHP: 10
+  hp: 1
+  MaxHP: 1
   Attack: 0
   desoryOnDeath: 1
   lifetime: 4

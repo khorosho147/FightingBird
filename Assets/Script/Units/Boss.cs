@@ -36,7 +36,7 @@ public class Boss : Enemy
 
     }
 
-    IEnumerator Attack()
+    new IEnumerator Attack()
     {
         while (true)
         {
