@@ -9,6 +9,15 @@ public class Player : Unit
 
     private float timer = 0;
 
+    Vector2 worldPosLeftBottom;
+    Vector2 worldPosTopRight;
+
+    private void Start()
+    {
+        worldPosLeftBottom = Camera.main.ViewportToWorldPoint(Vector2.zero);
+        worldPosTopRight = Camera.main.ViewportToWorldPoint(Vector2.one);
+    }
+
     public override void OnUpdate()
     {
         if (death)
@@ -20,12 +29,22 @@ public class Player : Unit
         pos.y += Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
         transform.position = pos;
+        LimitPosition(this.transform);
+
 
         if (Input.GetButton("Fire1"))
         {
             Fire();
         }
     }
+
+    public void LimitPosition(Transform trNeedLimit)
+    {
+        trNeedLimit.position = new Vector3(Mathf.Clamp(trNeedLimit.position.x, worldPosLeftBottom.x, worldPosTopRight.x),
+                                           Mathf.Clamp(trNeedLimit.position.y, worldPosLeftBottom.y, worldPosTopRight.y),
+                                           trNeedLimit.position.z);
+    }
+
 
     public void Rebirth()
     {
