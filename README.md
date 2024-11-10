@@ -59,7 +59,7 @@
   - 弾に当たるとダメージを受け、敵に直接触れると即死します。  
   - 敵を倒すと、回復アイテムがランダムでドロップしますが、最初の敵は特に高確率でドロップします。  
 - ステージが進むにつれて、敵の数や攻撃の頻度が増加します。  
-- 非常にシンプルなレベルエディターがあり、プレイヤーは基本的なステージのカスタマイズが可能です。
+- 非常にシンプルなレベルエディターがあり、効率的にステージ設計が可能です。
 
 **English:**  
 - The player has 3 lives. When HP is depleted, the player respawns at the starting position with a few seconds of invincibility.  
